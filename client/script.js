@@ -76,7 +76,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   //fetch the data from the server --> Bot's response
-  const response = await fetch('http://localhost:8000', {
+  const response = await fetch('https://meganchat.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
