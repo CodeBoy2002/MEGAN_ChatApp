@@ -17,7 +17,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.get('/', (req, res) => {
+app.get('/', async(req, res) => {
     res.status(200).send({
         message: 'Hello from megan'
     })
@@ -42,7 +42,7 @@ app.post('/', async(req, res) => {
         })
     } catch (error) {
         console.log(error)
-        res.status(500).send({ error })
+        res.status(500).send(error || 'Something went wrong!!')
     }
 })
 
